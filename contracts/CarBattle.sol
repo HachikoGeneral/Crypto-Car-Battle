@@ -1,36 +1,3 @@
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
-
-contract ECommerce {
-    IERC20 token;
-    address private owner;
-    
-    constructor() public {
-        token = IERC20(0x87Ffc48C9f89fc5dfA05836e083406D684FD6331);
-        owner = msg.sender;
-    }
-
-function GetUserTokenBalance() public view returns(uint256){ 
-       return token.balanceOf(msg.sender);// balancdOf function is already declared in ERC20 token function
-   }
-   
-   function Approvetokens(uint256 _tokenamount) public returns(bool){
-       token.approve(address(this), _tokenamount);
-       return true;
-   }
-   
-   function AcceptPayment(uint256 _tokenamount) public returns(bool) {
-       require(_tokenamount > GetAllowance(), "Please approve tokens before transferring");
-       token.transfer(address(this), _tokenamount);
-       return true;
-   }
-   
-   function GetContractTokenBalance() public OnlyOwner view returns(uint256){
-       return token.balanceOf(address(this));
-   }
-
 pragma solidity ^0.6.2;
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol";
