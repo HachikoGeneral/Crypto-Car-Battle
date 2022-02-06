@@ -5,11 +5,11 @@ var abi = [[]
 const GAS = 500000;
 const GAS_PRICE = "20000000000";
 
-if (window.ethereum) {
-  window.web3 = new Web3(ethereum);
+if (window.bsc) {
+  window.web3 = new Web3(bsc);
   try {
     // Request account access if needed
-		ethereum.enable();
+		bsc.enable();
 		window.web3.eth.net.getNetworkType(){
 		});
     // Acccounts now exposed
