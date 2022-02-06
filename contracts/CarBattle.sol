@@ -564,6 +564,7 @@ contract ERC721 is Context, ERC165, IERC721, IERC721Metadata {
         _name = name_;
         _symbol = symbol_;
     }
+
     /**
      * @dev See {IERC165-supportsInterface}.
      */
