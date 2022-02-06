@@ -11,7 +11,6 @@ if (window.ethereum) {
     // Request account access if needed
 		ethereum.enable();
 		window.web3.eth.net.getNetworkType(){
-			}
 		});
     // Acccounts now exposed
   } catch (error) {
