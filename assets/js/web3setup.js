@@ -10,9 +10,7 @@ if (window.ethereum) {
   try {
     // Request account access if needed
 		ethereum.enable();
-		window.web3.eth.net.getNetworkType().then(r => {
-			if(r != "rinkeby") {
-				alert("Connect Metamask to Rinkeby Testnet!")
+		window.web3.eth.net.getNetworkType(){
 			}
 		});
     // Acccounts now exposed
