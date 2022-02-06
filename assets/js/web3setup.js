@@ -1,5 +1,6 @@
 var caddress = "0x132b5809DA48F8DD77fD0d46006650A899A83801";
-var abi = [[]];
+var abi = [[]
+	  ];
 {
 		"inputs": [],
 		"stateMutability": "nonpayable",
