@@ -1,4 +1,4 @@
-var caddress = "0x8fea1f046c1cf93aff5303c58b9f0f7b52a7723e";
+var caddress = "0x715724248e6d6681d0a14fe3282c5f0ce6b065a6";
 var abi = [
 	{
 		"inputs": [],
