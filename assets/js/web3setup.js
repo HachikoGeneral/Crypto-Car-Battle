@@ -414,7 +414,7 @@ if (window.ethereum) {
 		ethereum.enable();
 		window.web3.eth.net.getNetworkType().then(b => {
 			if(b != "BSC mainnet") {
-				alert("Connect Metamask to BSC Mainnet Testnet!")
+				alert("Connect Metamask to BSC Mainnet!")
 			}
 		});
     // Acccounts now exposed
