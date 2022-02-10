@@ -24,8 +24,6 @@ var Login = {
         NFT_balance = res;
         if(NFT_balance == 0) {
           game.state.start('Mint');
-        } else {
-          game.state.start('CarsListLoader');
         }
       });
   },
