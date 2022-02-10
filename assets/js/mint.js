@@ -26,7 +26,6 @@ var Mint = {
       .send({ from: web3.eth.defaultAccount })
       .then(function (res) {
         console.log(res, "MINTED");
-        game.state.start('CarsListLoader');
       });
   },
 
