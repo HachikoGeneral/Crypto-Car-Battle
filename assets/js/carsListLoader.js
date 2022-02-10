@@ -21,7 +21,6 @@ var CarsListLoader = {
         tokenCount = res;
         for (var i = 0; i < tokenCount; i++) {
           contract.methods
-            .tokenOfOwnerByIndex(web3.eth.defaultAccount)
             .call()
             .then(function (index) {
               contract.methods
