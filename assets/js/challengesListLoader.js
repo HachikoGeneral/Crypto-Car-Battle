@@ -1,23 +1,23 @@
 var AllChallenges = [];
 var temp777 = 0, temptotal, tempcounter=0;
 
-var ChallengesListLoader = {
+var CarsListLoader = {
   preload: function () {
-  },
-
-  create: function () {
     contract.methods
-      .getBattlesCount()
+      .balanceOf(web3.eth.defaultAccount)
       .call()
-      .then(function (count) {
-        temptotal = count;
-        for (var i = 0; i < count; i++) {
+      .then(function (res) {
+        tokenCount = res;
+        for (var i = 0; i < tokenCount; i++) {
           contract.methods
-            .battles(i)
+            .tokenOfOwnerByIndex(web3.eth.defaultAccount, i)
             .call()
-            .then(function (battle) {
-              if (!battle.ended) AllChallenges.push(battle);
-              tempcounter++;
+            .then(function (index) {
+              contract.methods
+                .cars(index)
+                .call()
+                .then(function (car) {
+                  userCars.push(car);
             });
         }
       });
