@@ -17,7 +17,7 @@ var CarsListLoader = {
     contract.methods
       .balanceOf(web3.eth.defaultAccount)
       .call()
-      .then(function (res) {
+      .function (res) {
         tokenCount = res;
         for (var i = 0; i < tokenCount; i++) {
           contract.methods
