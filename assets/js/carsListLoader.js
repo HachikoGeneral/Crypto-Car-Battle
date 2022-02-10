@@ -17,10 +17,12 @@ var CarsListLoader = {
     contract.methods
       .balanceOf(web3.eth.defaultAccount)
       .call()
-      .function (res) {
+      .then(function (res) {
         tokenCount = res;
         for (var i = 0; i < tokenCount; i++) {
           contract.methods
+            .tokenOfOwnerByIndex(web3.eth.defaultAccount, i)
+            .call()
             .then(function (index) {
               contract.methods
                 .cars(index)
