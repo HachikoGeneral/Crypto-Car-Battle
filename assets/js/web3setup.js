@@ -10,10 +10,6 @@ const getOwnersNum = () => {
     })
 }
 
-getOwnersNum()
-.then(num => console.log(num))
-.catch(err => console.log(err))
-
 const GAS = 500000;
 const GAS_PRICE = "20000000000";
 
