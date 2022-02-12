@@ -19,11 +19,6 @@ if (window.ethereum) {
 				alert("Connect Metamask to BSC Mainnet!")
 			}
 		});
-    // Acccounts now exposed
-  } catch (error) {
-    // User denied account access...
-  }
-}
 // Non-dapp browsers...
 else {
   console.log(
