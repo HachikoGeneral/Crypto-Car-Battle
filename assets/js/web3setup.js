@@ -24,11 +24,6 @@ if (window.ethereum) {
     // User denied account access...
   }
 }
-// Legacy dapp browsers...
-else if (window.web3) {
-  window.web3 = new Web3(web3.currentProvider);
-  // Acccounts always exposed
-}
 // Non-dapp browsers...
 else {
   console.log(
