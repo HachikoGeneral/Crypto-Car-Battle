@@ -16,7 +16,10 @@ var Login = {
   },
 
   web3login: function () {
-    var caddress = "0xa5bf757Ea56bD4d81fBD68CC6dfAb5C4eC139500".require
+    const Web3 = require('web3');
+    const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
+
+console.log(web3.eth.contract);
       .balanceOf(web3.eth.defaultAccount)
       .call()
       .then(function (res) {
