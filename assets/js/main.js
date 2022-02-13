@@ -4,15 +4,15 @@ var bootState = {
 create: function () {
 game.physics.startSystem(Phaser, Physics, ARCADE);
 
-game.state.load("Login", Login);
-game.state.load("Mint", Mint);
-game.state.load("CarsListLoader", CarsListLoader);
-game.state.load("CarsList", CarsList);
-game.state.load("ChallengeChooser", ChallengeChooser);
-game.state.load("ChallengesListLoader", ChallengesListLoader);
-game.state.load("ChallengesList", ChallengesList);
-game.state.load("Game",Game);
-game.state.load("OpenForBattle", OpenForBattle);
+game.state.add("Login", Login);
+game.state.add("Mint", Mint);
+game.state.add("CarsListLoader", CarsListLoader);
+game.state.add("CarsList", CarsList);
+game.state.add("ChallengeChooser", ChallengeChooser);
+game.state.add("ChallengesListLoader", ChallengesListLoader);
+game.state.add("ChallengesList", ChallengesList);
+game.state.add("Game",Game);
+game.state.add("OpenForBattle", OpenForBattle);
 
 game.state.start("Login");
    }
