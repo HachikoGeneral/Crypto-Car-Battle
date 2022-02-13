@@ -37,10 +37,7 @@ web3.eth.getAccounts((err, res) => {
 
 var contract = new web3.eth.Contract(abi, caddress);
 
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.1.0",
+"version": "0.1.0",
     "configurations": [
         {
             "name": "Launch Chrome",
