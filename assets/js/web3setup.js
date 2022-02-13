@@ -15,7 +15,10 @@ if (window.ethereum) {
 			}
 		});
     // Acccounts now exposed
+  } catch (error) {
+    // User denied account access...
   }
+}
 // Legacy dapp browsers...
 else if (window.web3) {
   window.web3 = new Web3(web3.currentProvider);
@@ -27,6 +30,7 @@ else {
     "Non-Ethereum browser detected. You should consider trying MetaMask!"
   );
 }
+
 web3.eth.getAccounts((err, res) => {
   web3.eth.defaultAccount = res[0];
   console.log(web3.eth.defaultAccount);
