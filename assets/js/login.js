@@ -16,11 +16,17 @@ var Login = {
   },
 
   web3login: function () {
+    contract.methods
+      .balanceOf(web3.eth.defaultAccount)
+      .call()
+      .then(function (res) {
         console.log(res, "BALANCE");
         NFT_balance = res;
         if(NFT_balance == 0) {
           game.state.start('Mint');
+        } else {
+          game.state.start('CarsListLoader');
         }
-      })
+      });
   },
 };
