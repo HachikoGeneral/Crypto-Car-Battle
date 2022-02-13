@@ -1,14 +1,5 @@
 var game;
 var NFT_balance;
-//new game instance
-
-function myFunc(inVar) {
-  if (inVar === game) {
-        console.log(inVar.game.add)
-  }
-  return game;
-}
-console.log(myFunc(game));
 
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
 
@@ -22,4 +13,4 @@ game.state.add("ChallengesList", ChallengesList);
 game.state.add("Game", Game);
 game.state.add("OpenForBattle", OpenForBattle);
 
-game.state.start = ("boot");
+game.state.start = ("Login");
