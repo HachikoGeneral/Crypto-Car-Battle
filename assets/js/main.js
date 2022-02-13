@@ -1,9 +1,17 @@
 var game;
 var NFT_balance;
 //new game instance
+
+function myFunc(add) {
+  if (add === undefined) {
+        console.log(add.not)
+  }
+  return add;
+}
+var add=99;    //initialize here
+console.log(myFunc(add));
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
-add = 'Login,Mint,CarsListLoader,CarsList,ChallengeChooser,ChallengesListLoader,ChallengesList,Game,OpenForBattle, boot';
-add.substring(1); // "obj"
+
 game.state.add = ("Login"),
 game.state.add = ("Mint", Mint),
 game.state.add = ("CarsListLoader", CarsListLoader),
