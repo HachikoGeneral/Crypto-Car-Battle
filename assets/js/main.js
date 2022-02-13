@@ -8,8 +8,8 @@ function myFunc(inVar) {
   }
   return inVar;
 }
-var testVar="Login","Mint","CarsListLoader","CarsList","ChallengeChooser","ChallengesListLoader","ChallengesList","Game","OpenForBattle","boot";    //initialize here
 console.log(myFunc(testVar));
+
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
 
 game.state.add("Login", Login);
