@@ -13,4 +13,4 @@ game.state.add = ("ChallengesList", ChallengesList),
 game.state.add = ("Game", Game),
 game.state.add = ("OpenForBattle", OpenForBattle),
 
-game.state.start = ("boot");
+game.state.start = ("boot"))
