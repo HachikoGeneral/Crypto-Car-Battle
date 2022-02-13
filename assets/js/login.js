@@ -17,9 +17,7 @@ var Login = {
 
   web3login: function () {
     const Web3 = require('web3');
-    const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545"));
-
-console.log(web3.eth.contract);
+    console.log(web3.eth.contract);
       .balanceOf(web3.eth.defaultAccount)
       .call()
       .then(function (res) {
