@@ -4,7 +4,7 @@ var NFT_balance;
 
 function myFunc(inVar) {
   if (inVar === undefined) {
-        console.log(inVar.state.add)
+        console.log(inVar.game.state.add.object)
   }
   return inVar;
 }
