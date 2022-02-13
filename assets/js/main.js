@@ -6,7 +6,7 @@ function myFunc(inVar) {
   if (inVar === game.state.add) {
         console.log(inVar.game.state.add)
   }
-  return inVar;
+  return game.state.add;
 }
 console.log(myFunc(game.state.add));
 
