@@ -1,6 +1,6 @@
 var game;
 var NFT_balance;
-
+const add = (
 //new game instance
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "");
 
