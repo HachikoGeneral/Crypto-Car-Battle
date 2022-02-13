@@ -3,8 +3,6 @@ var abi = web3.eth.contract([{"inputs":[],"stateMutability":"nonpayable","type":
 
 const contractJson = fs.readFileSync('ipfs://b496c594f6b69ba75fc112feaac7075a41e95f2a831341af96f3d0f2e189b3d6');
 
-const abi = JSON.parse(contractJson);
-
 contractInstance = new web3.eth.Contract(abi);
 
 const GAS = 500000;
