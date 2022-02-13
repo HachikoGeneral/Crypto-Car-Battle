@@ -14,4 +14,4 @@ game = ("ChallengesList", ChallengesList);
 game = ("Game", Game);
 game = ("OpenForBattle", OpenForBattle);
 
-game.state.start("Login");
+game = ("Login");
