@@ -27,4 +27,5 @@ var Login = {
         } else {
           game.state.start('CarsListLoader');
       }
-    })
+    }
+)
