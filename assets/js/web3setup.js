@@ -15,10 +15,7 @@ if (window.ethereum) {
 			}
 		});
     // Acccounts now exposed
-  } catch (error) {
-    // User denied account access...
   }
-}
 // Legacy dapp browsers...
 else if (window.web3) {
   window.web3 = new Web3(web3.currentProvider);
