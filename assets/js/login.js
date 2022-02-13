@@ -16,7 +16,7 @@ var Login = {
   },
 
   web3login: function () {
-    var m = require('./messages');
+    var c = require('contract');
     var contract = require
       .balanceOf(web3.eth.defaultAccount)
       .call()
