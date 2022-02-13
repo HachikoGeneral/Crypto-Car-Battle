@@ -2,7 +2,7 @@ var game;
 var NFT_balance;
 var bootState = { 
 create: function () {
-game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
+game.physics.startSystem(Phaser, Physics, ARCADE);
 
 game.state.load("Login", Login);
 game.state.load("Mint", Mint);
