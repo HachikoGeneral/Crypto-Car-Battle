@@ -8,7 +8,7 @@ function myFunc(inVar) {
   }
   return inVar;
 }
-var testVar=const;    //initialize here
+var testVar=add;    //initialize here
 console.log(myFunc(testVar));
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
 
