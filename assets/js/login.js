@@ -16,10 +16,10 @@ var Login = {
   },
 
   web3login: function () {
-    var contract = {
-      balanceOf(web3.eth.defaultAccount)
-      call()
-      then(function (res) {
+    var contract.require
+      .balanceOf(web3.eth.defaultAccount)
+      .call()
+      .then(function (res) {
         console.log(res, "BALANCE");
         NFT_balance = res;
         if(NFT_balance == 0) {
