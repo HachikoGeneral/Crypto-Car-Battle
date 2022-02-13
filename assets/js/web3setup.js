@@ -38,4 +38,3 @@ web3.eth.getAccounts((err, res) => {
   console.log(web3.eth.defaultAccount);
 });
 
-var contract = new web3.eth.Contract(abi, caddress);
