@@ -4,11 +4,11 @@ var NFT_balance;
 
 function myFunc(inVar) {
   if (inVar === game.state.add) {
-        console.log(inVar.game.state.add)
+        console.log(inVar.game.add)
   }
-  return game.state.add;
+  return game.add;
 }
-console.log(myFunc(game.state.add));
+console.log(myFunc(game.add));
 
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
 
