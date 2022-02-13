@@ -10,7 +10,7 @@ game.state.add("CarsList", CarsList);
 game.state.add("ChallengeChooser", ChallengeChooser);
 game.state.add("ChallengesListLoader", ChallengesListLoader);
 game.state.add("ChallengesList", ChallengesList);
-game.state.add("Game", Game);
+game.state.add("Game",assets/js/game.js);
 game.state.add("OpenForBattle", OpenForBattle);
 
 game.state.start = ("Login");
