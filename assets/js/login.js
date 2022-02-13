@@ -16,7 +16,7 @@ var Login = {
   },
 
   web3login: function () {
-    contract
+    var caddress = "0xa5bf757Ea56bD4d81fBD68CC6dfAb5C4eC139500";
       .balanceOf(web3.eth.defaultAccount)
       .call()
       .then(function (res) {
