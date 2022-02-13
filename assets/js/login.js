@@ -21,6 +21,6 @@ var Login = {
         if(NFT_balance == 0) {
           game.state.start('Mint');
         }
-      });
+      })
   },
 };
