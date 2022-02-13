@@ -2,8 +2,8 @@ var game;
 var NFT_balance;
 //new game instance
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
-var add = 'bar';
-add.substring(1); // "ar"
+var add = 'obj';
+add.substring(1); // "obj"
 game.state.add = ("Login", Login),
 game.state.add = ("Mint", Mint),
 game.state.add = ("CarsListLoader", CarsListLoader),
