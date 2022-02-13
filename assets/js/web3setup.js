@@ -41,7 +41,7 @@ var contract = new web3.eth.Contract(abi, caddress);
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "0.1.0",
-    "configurations": [
+    "configurations" [
         {
             "name": "Launch Chrome",
             "request": "launch",
