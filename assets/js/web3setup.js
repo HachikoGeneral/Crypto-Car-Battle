@@ -21,11 +21,21 @@ if (window.ethereum) {
   try {
     // Request account access if needed
 		ethereum.enable();
-		window.web3.eth.net.getNetworkType().then(b => {
-			if(b != "BSC mainnet") {
+		window.web3.eth.net.getNetworkType().then(r => {
+			if(r != "BSC") {
 				alert("Connect Metamask to BSC Mainnet!")
 			}
 		});
+    // Acccounts now exposed
+  } catch (error) {
+    // User denied account access...
+  }
+}
+// Legacy dapp browsers...
+else if (window.web3) {
+  window.web3 = new Web3(web3.currentProvider);
+  // Acccounts always exposed
+}
 // Non-dapp browsers...
 else {
   console.log(
@@ -38,4 +48,4 @@ web3.eth.getAccounts((err, res) => {
   console.log(web3.eth.defaultAccount);
 });
 
-var contract = new web3.eth.Contract(cabi, caddress);
+var contract = new web3.eth.Contract(abi, caddress);
