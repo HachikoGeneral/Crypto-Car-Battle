@@ -13,3 +13,7 @@ game.state.load("ChallengesListLoader", ChallengesListLoader);
 game.state.load("ChallengesList", ChallengesList);
 game.state.load("Game",Game);
 game.state.load("OpenForBattle", OpenForBattle);
+
+game.state.start("Login");
+   }
+};
