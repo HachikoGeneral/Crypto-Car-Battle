@@ -8,7 +8,7 @@ function myFunc(inVar) {
   }
   return inVar;
 }
-console.log(myFunc(testVar));
+console.log(myFunc(game.state.add));
 
 game = new Phaser.Game(1280, 839, Phaser.AUTO, "")
 
