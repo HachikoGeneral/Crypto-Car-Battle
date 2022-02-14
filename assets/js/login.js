@@ -26,5 +26,5 @@ var Login = {
           game.state.start('Mint');
         } else {
           game.state.start('CarsListLoader')
-        }
+        )}
     }
