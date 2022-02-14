@@ -28,4 +28,4 @@ var Login = {
           game.state.start('CarsListLoader');
         
     }
-    }
+    
