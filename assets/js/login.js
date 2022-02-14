@@ -16,7 +16,7 @@ var Login = {
   },
 
   web3login: function () {
-    contract.web3
+    contract.method
       .balanceOf(web3.eth.defaultAccount)
       .call()
       .then(function (res) {
