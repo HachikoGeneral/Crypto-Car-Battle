@@ -16,7 +16,7 @@ var Login = {
   },
 
   web3login: function () {
-    contract.methods
+    contract.game
       .balanceOf(web3.eth.defaultAccount)
       .call()
       .then(function (res) {
@@ -25,7 +25,4 @@ var Login = {
         if(NFT_balance == 0) {
           game.state.start('Mint');
         } else {
-          game.state.start('CarsListLoader'); 
-    }
-    })
-  }}
+          game.state.start('CarsListLoader')
