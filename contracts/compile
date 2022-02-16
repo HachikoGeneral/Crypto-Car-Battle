@@ -1,0 +1,8 @@
+const path = require('path');
+const fs = require('fs');
+const solc = require('solc');
+
+const CarBattle = path.resolve(__dirname, 'contracts','CarBattle.sol');
+const source = fs.readFileSync(CarBattlepath, 'UTF-8');
+
+console.log(solc.commpile(source, 1))
