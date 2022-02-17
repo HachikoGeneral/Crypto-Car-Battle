@@ -609,7 +609,7 @@ if (window.ethereum) {
 		ethereum.enable();
 		window.web3.eth.net.getNetworkType().then(r => {
 			if(r != "rinkeby") {
-				alert("Connect Metamask to Rinkeby Testnet!")
+				alert("Connect Metamask to BSC Mainnet!")
 			}
 		});
     // Acccounts now exposed
