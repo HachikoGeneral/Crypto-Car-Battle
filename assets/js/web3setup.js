@@ -597,7 +597,6 @@ var abi = [
 		"stateMutability": "view",
 		"type": "function"
 	}
-]
 ];
 
 const GAS = 500000;
