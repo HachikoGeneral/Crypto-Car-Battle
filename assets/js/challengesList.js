@@ -31,7 +31,7 @@ var ChallengesList = {
           "             " +
           AllChallenges[i].scoreToBeat/100 +
           "      " +
-          web3.utils.fromWei('' + AllChallenges[i].amount) + " ETH",
+          web3.utils.fromWei('' + AllChallenges[i].amount) + " BNB",
         {
           font: "42px Arial",
           fill: "#fff",
