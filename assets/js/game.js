@@ -72,7 +72,6 @@ var Game = {
       align: "right",
     });
     trigger1 = game.add.sprite(708, 38, "trigger");
-    trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
     
@@ -81,7 +80,6 @@ var Game = {
 
   checkOverlap: function (spriteA, spriteB) {
     var boundsA = spriteA.getBounds();
-    var boundsB = spriteB.getBounds();
     var boundsB = spriteB.getBounds();
 
     return Phaser.Rectangle.intersects(boundsA, boundsB);
