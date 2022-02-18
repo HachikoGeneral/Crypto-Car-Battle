@@ -73,7 +73,7 @@ var Game = {
     });
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger1 = game.add.sprite(136, 656, "trigger");
-    trigger1 = game.add.sprite(632, 38, "trigger");
+    trigger3 = game.add.sprite(632, 38, "trigger");
     
     finalScore = 999999;
   },
