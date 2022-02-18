@@ -49,7 +49,7 @@ var Game = {
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
     
      /*Adding outer_weed*/
-    var outer_weed = game.add.sprite(240, 420, "outer_weed");
+    var outer_weed = game.add.sprite(140, 320, "outer_weed");
     game.physics.p2.enable(outer_weed);
     outer_weed.body.kinematic = true; //Building is static
     outer_weed.body.clearShapes(); //Remove standard Bounding Box
