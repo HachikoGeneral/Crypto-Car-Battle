@@ -16,7 +16,9 @@ var Game = {
       `./assets/images/cars/${carLevelWithColor[selectedCar.level]}.png`
     );
     game.load.spritesheet("building", "./assets/images/building.png");
+    game.load.spritesheet("outer_weed", "./assets/images/outer_weed.png");
     game.load.physics("collision", "./assets/js/collision.json");
+    game.load.image("trigger", "./assets/images/trigger1.png");
     game.load.image("trigger", "./assets/images/trigger1.png");
     game.load.image("trigger", "./assets/images/trigger1.png");
   },
