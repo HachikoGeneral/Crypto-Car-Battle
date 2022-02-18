@@ -81,7 +81,7 @@ var Game = {
   checkOverlap: function (spriteA, spriteB) {
     var boundsA = spriteA.getBounds();
     var boundsB = spriteB.getBounds();
-    var boundsC = spriteC.getBounds();
+    var boundsA = spriteA.getBounds();
 
     return Phaser.Rectangle.intersects(boundsA, boundsB);
   },
