@@ -1,7 +1,7 @@
 var cursors;
 var velocity = 0;
 var initTime;
-var trigger1, trigger2, trigger3, trigger4;
+var trigger1, trigger2, trigger3;
 var started = 0,
   checkpoint = 0,
   end = 0;
@@ -51,9 +51,9 @@ var Game = {
      /*Adding outer_weed*/
     var outer_weed = game.add.sprite(240, 420, "outer_weed");
     game.physics.p2.enable(outer_weed);
-    building.body.kinematic = true; //Building is static
-    building.body.clearShapes(); //Remove standard Bounding Box
-    building.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
+    outer_weed.body.kinematic = true; //Building is static
+    outer_weed.body.clearShapes(); //Remove standard Bounding Box
+    outer_weed.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
 
     //Set Collision Groups
     car.body.setCollisionGroup(carCollisionGroup);
@@ -74,7 +74,6 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-    trigger4 = game.add.sprite(232, 38, "trigger");
     
     finalScore = 999999;
   },
