@@ -44,11 +44,6 @@ var Game = {
     building.body.clearShapes(); //Remove standard Bounding Box
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
     
-    //Set Collision Groups
-    car.body.setCollisionGroup(carCollisionGroup);
-    building.body.setCollisionGroup(buildingCollisionGroup);
-    outer_weed.body.setCollisionGroup(outer_weedCollisionGroup);
-    
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
