@@ -16,10 +16,7 @@ var Game = {
       `./assets/images/cars/${carLevelWithColor[selectedCar.level]}.png`
     );
     game.load.spritesheet("building", "./assets/images/building.png");
-    game.load.spritesheet("outer_weed", "./assets/images/outer_weed.png");
     game.load.physics("collision", "./assets/js/collision.json");
-    game.load.image("trigger", "./assets/images/trigger1.png");
-    game.load.image("trigger", "./assets/images/trigger1.png");
     game.load.image("trigger", "./assets/images/trigger1.png");
   },
 
@@ -38,7 +35,6 @@ var Game = {
     /*Create Collision Groups*/
     var carCollisionGroup = game.physics.p2.createCollisionGroup();
     var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
-    var outer_weedCollisionGroup = game.physics.p2.createCollisionGroup();
     game.physics.p2.updateBoundsCollisionGroup();
 
     /*Adding Building*/
@@ -47,23 +43,14 @@ var Game = {
     building.body.kinematic = true; //Building is static
     building.body.clearShapes(); //Remove standard Bounding Box
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
-    
-     /*Adding outer_weed*/
-    var outer_weed = game.add.sprite(150, 250, "outer_weed");
-    game.physics.p2.enable(outer_weed);
-    outer_weed.body.kinematic = true; //outer_weed is static
-    outer_weed.body.clearShapes(); //Remove standard Bounding Box
-    outer_weed.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
 
     //Set Collision Groups
     car.body.setCollisionGroup(carCollisionGroup);
     building.body.setCollisionGroup(buildingCollisionGroup);
-    outer_weed.body.setCollisionGroup(outer_weedCollisionGroup);
 
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
-    outer_weed.body.collides([outer_weedCollisionGroup, carCollisionGroup]);
 
     initTime = 0;
     clockText = game.add.text(0, 0, "Time: 0 sec", {
@@ -74,7 +61,7 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-    
+
     finalScore = 999999;
   },
 
