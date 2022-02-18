@@ -72,7 +72,7 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-    trigger4 = game.add.sprite(32, 38, "trigger");
+    trigger4 = game.add.sprite(132, 138, "trigger");
 
     finalScore = 999999;
   },
