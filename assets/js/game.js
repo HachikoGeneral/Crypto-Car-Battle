@@ -43,13 +43,6 @@ var Game = {
     building.body.kinematic = true; //Building is static
     building.body.clearShapes(); //Remove standard Bounding Box
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
-
-     /*Adding outer_weed*/
-    var outer_weed = game.add.sprite(40, 20, "outer_weed");
-    game.physics.p2.enable(outer_weed);
-    building.body.kinematic = true; //outer_weed is static
-    building.body.clearShapes(); //Remove standard Bounding Box
-    building.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
     
     //Set Collision Groups
     car.body.setCollisionGroup(carCollisionGroup);
