@@ -72,7 +72,7 @@ var Game = {
       align: "right",
     });
     trigger1 = game.add.sprite(708, 38, "trigger");
-    trigger2 = game.add.sprite(236, 56, "trigger");
+    trigger2 = game.add.sprite(236, 456, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
     
     finalScore = 999999;
