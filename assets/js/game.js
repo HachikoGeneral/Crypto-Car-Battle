@@ -15,7 +15,7 @@ var Game = {
       "car",
       `./assets/images/cars/${carLevelWithColor[selectedCar.level]}.png`
     );
-    game.load.spritesheet("building", "outer_weed", "./assets/images/building.png/outer_weed");
+    game.load.spritesheet("building", "./assets/images/building.png");
     game.load.physics("collision", "./assets/js/collision.json");
     game.load.image("trigger", "./assets/images/trigger1.png");
     game.load.image("trigger", "./assets/images/trigger1.png");
@@ -48,7 +48,7 @@ var Game = {
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
     
      /*Adding outer_weed*/
-    var outer_weed = game.add.sprite(120, 250, "outer_weed");
+    var outer_weed = game.add.sprite(150, 250, "outer_weed");
     game.physics.p2.enable(outer_weed);
     outer_weed.body.kinematic = true; //outer_weed is static
     outer_weed.body.clearShapes(); //Remove standard Bounding Box
