@@ -47,7 +47,7 @@ var Game = {
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
     
       /*Adding outer-weed*/
-    var building = game.add.sprite(640, 420, "outer_weed");
+    var outer_weed = game.add.sprite(640, 420, "outer_weed");
     game.physics.p2.enable(outer_weed);
     building.body.kinematic = true; //Building is static
     building.body.clearShapes(); //Remove standard Bounding Box
@@ -56,6 +56,7 @@ var Game = {
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
+    outer_weed.body.collides([outer_weedCollisionGroup, carCollisionGroup]);
     
     initTime = 0;
     clockText = game.add.text(0, 0, "Time: 0 sec", {
