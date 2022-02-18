@@ -1,7 +1,7 @@
 var cursors;
 var velocity = 0;
 var initTime;
-var trigger1, trigger2, trigger3, trigger 4;
+var trigger1, trigger2, trigger3, trigger4;
 var started = 0,
   checkpoint = 0,
   end = 0;
