@@ -72,6 +72,7 @@ var Game = {
       align: "right",
     });
     trigger1 = game.add.sprite(708, 38, "trigger");
+    trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
     
