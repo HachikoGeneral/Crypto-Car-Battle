@@ -47,7 +47,6 @@ var Game = {
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
-    outer_weed.body.collides([outer_weedCollisionGroup, carCollisionGroup]);
     
     initTime = 0;
     clockText = game.add.text(0, 0, "Time: 0 sec", {
