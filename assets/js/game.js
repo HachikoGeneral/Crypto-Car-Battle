@@ -18,6 +18,7 @@ var Game = {
     game.load.spritesheet("building", "./assets/images/building.png");
     game.load.physics("collision", "./assets/js/collision.json");
     game.load.image("trigger", "./assets/images/trigger1.png");
+    game.load.image("trigger", "./assets/images/trigger1.png");
   },
 
   create: function () {
