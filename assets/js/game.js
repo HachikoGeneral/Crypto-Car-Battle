@@ -1,7 +1,7 @@
 var cursors;
 var velocity = 0;
 var initTime;
-var trigger1, trigger2, trigger3, trigger4;
+var trigger1, trigger2, trigger3;
 var started = 0,
   checkpoint = 0,
   end = 0;
@@ -16,7 +16,6 @@ var Game = {
       `./assets/images/cars/${carLevelWithColor[selectedCar.level]}.png`
     );
     game.load.spritesheet("building", "./assets/images/building.png");
-    game.load.spritesheet("outer_weed", "./assets/images/outer_weed.png");
     game.load.physics("collision", "./assets/js/collision.json");
     game.load.image("trigger", "./assets/images/trigger1.png");
   },
@@ -36,28 +35,23 @@ var Game = {
     /*Create Collision Groups*/
     var carCollisionGroup = game.physics.p2.createCollisionGroup();
     var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
-    var outer_weedCollisionGroup = game.physics.p2.createCollisionGroup();
     game.physics.p2.updateBoundsCollisionGroup();
-    
+
     /*Adding Building*/
     var building = game.add.sprite(640, 420, "building");
     game.physics.p2.enable(building);
     building.body.kinematic = true; //Building is static
     building.body.clearShapes(); //Remove standard Bounding Box
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
-    
-      /*Adding outer-weed*/
-    var outer_weed = game.add.sprite(940, 120, "outer_weed");
-    game.physics.p2.enable(outer_weed);
-    building.body.kinematic = true; //Building is static
-    building.body.clearShapes(); //Remove standard Bounding Box
-    building.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
-    
+
+    //Set Collision Groups
+    car.body.setCollisionGroup(carCollisionGroup);
+    building.body.setCollisionGroup(buildingCollisionGroup);
+
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
-    outer_weed.body.collides([outer_weedCollisionGroup, carCollisionGroup]);
-    
+
     initTime = 0;
     clockText = game.add.text(0, 0, "Time: 0 sec", {
       font: "42px Arial",
@@ -67,8 +61,7 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-    trigger4 = game.add.sprite(32, 38, "trigger");
-    
+
     finalScore = 999999;
   },
 
