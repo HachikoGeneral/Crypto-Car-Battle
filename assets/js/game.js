@@ -36,6 +36,7 @@ var Game = {
     /*Create Collision Groups*/
     var carCollisionGroup = game.physics.p2.createCollisionGroup();
     var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
+    var outer_weedCollisionGroup = game.physics.p2.createCollisionGroup();
     game.physics.p2.updateBoundsCollisionGroup();
 
     /*Adding Building*/
@@ -65,7 +66,7 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-    trigger4 = game.add.sprite(632, 38, "trigger");
+    trigger4 = game.add.sprite(32, 38, "trigger");
     
     finalScore = 999999;
   },
