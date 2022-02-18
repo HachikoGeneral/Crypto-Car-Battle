@@ -38,6 +38,7 @@ var Game = {
     /*Create Collision Groups*/
     var carCollisionGroup = game.physics.p2.createCollisionGroup();
     var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
+    var outer_weedCollisionGroup = game.physics.p2.createCollisionGroup();
     game.physics.p2.updateBoundsCollisionGroup();
 
     /*Adding Building*/
@@ -46,14 +47,23 @@ var Game = {
     building.body.kinematic = true; //Building is static
     building.body.clearShapes(); //Remove standard Bounding Box
     building.body.loadPolygon("collision", "building"); //Load Bounding Box from Physics Editor File
+    
+     /*Adding outer_weed*/
+    var outer_weed = game.add.sprite(240, 420, "outer_weed");
+    game.physics.p2.enable(outer_weed);
+    building.body.kinematic = true; //Building is static
+    building.body.clearShapes(); //Remove standard Bounding Box
+    building.body.loadPolygon("collision", "outer_weed"); //Load Bounding Box from Physics Editor File
 
     //Set Collision Groups
     car.body.setCollisionGroup(carCollisionGroup);
     building.body.setCollisionGroup(buildingCollisionGroup);
+    building.body.setCollisionGroup(outer_weedCollisionGroup);
 
     //Set Collision
     car.body.collides([carCollisionGroup, buildingCollisionGroup]);
     building.body.collides([buildingCollisionGroup, carCollisionGroup]);
+    outer_weed.body.collides([outer_weedCollisionGroup, carCollisionGroup]);
 
     initTime = 0;
     clockText = game.add.text(0, 0, "Time: 0 sec", {
