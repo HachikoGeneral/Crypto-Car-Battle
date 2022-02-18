@@ -1,7 +1,7 @@
 var cursors;
 var velocity = 0;
 var initTime;
-var trigger1, trigger2, trigger3;
+var trigger1, trigger2, trigger3, trigger 4;
 var started = 0,
   checkpoint = 0,
   end = 0;
@@ -65,7 +65,8 @@ var Game = {
     trigger1 = game.add.sprite(708, 38, "trigger");
     trigger2 = game.add.sprite(236, 656, "trigger");
     trigger3 = game.add.sprite(632, 38, "trigger");
-
+    trigger4 = game.add.sprite(632, 38, "trigger");
+    
     finalScore = 999999;
   },
 
