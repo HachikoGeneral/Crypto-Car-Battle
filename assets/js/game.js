@@ -36,9 +36,10 @@ var Game = {
     /*Create Collision Groups*/
     var carCollisionGroup = game.physics.p2.createCollisionGroup();
     var buildingCollisionGroup = game.physics.p2.createCollisionGroup();
+    game.physics.p2.updateBoundsCollisionGroup();
     var outer_weedCollisionGroup = game.physics.p2.createCollisionGroup();
     game.physics.p2.updateBoundsCollisionGroup();
-
+    
     /*Adding Building*/
     var building = game.add.sprite(640, 420, "building");
     game.physics.p2.enable(building);
